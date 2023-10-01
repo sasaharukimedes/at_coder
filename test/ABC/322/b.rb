@@ -1,3 +1,6 @@
+# 自分回答
+#おそらくstart_withのところで引数は取れない
+
 # n, m = gets.split.map(&:to_i)
 # s = gets.chomp
 # t = gets.chomp
@@ -33,3 +36,23 @@ elsif suffix
 else
   puts 3
 end
+
+# 公式回答
+# N, M = gets.split.map(&:to_i)
+# S, T = gets.chomp, gets.chomp
+
+# is_prefix = true
+# N.times do |i|
+#   is_prefix = false if S[i] != T[i]
+# end
+
+# is_suffix = true
+# N.times do |i|
+#   is_suffix = false if S[i] != T[M - N + i]
+# end
+
+# if is_prefix
+#   puts is_suffix ? 0 : 1
+# else
+#   puts is_suffix ? 2 : 3
+# end
