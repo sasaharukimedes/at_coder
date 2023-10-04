@@ -1,9 +1,15 @@
-N = gets.to_i
-D = []
-while N > 0
-  D.append(N % 10)
-  N /= 10
-end
-D.reverse!
+n, m = gets.chomp.split.map(&:to_i)
 
-puts D
+a_data = []
+n.times do
+  a_data << gets.chomp
+end
+
+b_data = []
+m.times do
+  b_data << gets.chomp
+end
+
+
+
+

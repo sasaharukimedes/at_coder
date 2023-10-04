@@ -12,6 +12,38 @@ a.sort!
   end
 end
 
+#Ruby回答者の解答例
+N, M = gets.split.collect(&:to_i)
+A = gets.split.collect(&:to_i)
+pairs = A.each_cons(2).to_a  # => [[1, 3], [3, 4], [4, 7], [7, 8]]
+if A.first != 1
+  pairs = [[0, A.first]] + pairs
+end
+c = 0
+(1..N).each do |i|
+  unless pairs[c]
+    break
+  end
+  b, e = pairs[c]
+  if i == b
+    p 0
+    next
+  end
+  if i < e
+    p e - i
+    next
+  end
+  c += 1
+  redo
+end
+p 0
+
+#コレでもいいというのだから驚き
+N, M = gets.split.collect(&:to_i)
+A = gets.split.collect(&:to_i)
+puts (1..N).collect { |i| A.bsearch { |e| e >= i } - i }
+
+
 # 公式回答
 
 # 二分探索
