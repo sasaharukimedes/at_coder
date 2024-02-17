@@ -40,3 +40,8 @@ puts str
 
 puts ary.join(' ')
 
+#入力された文字列をそれぞれを数値のまま配列に格納する
+s = gets.chomp.chars.map(&:to_i)
+
+#入力された文字を配列に格納する
+s = gets.chomp.chars
