@@ -5,7 +5,7 @@ num = gets.to_i # 整数
 # 複数行の入力を受け取る（文字列)
 str1 = gets.chomp
 
-#　1行に複数ある値を配列に詰めて受け取る
+# 1行に複数ある値を配列に詰めて受け取る
 numbers = gets.split.map(&:to_i)
 strings = gets.chomp.split
 
