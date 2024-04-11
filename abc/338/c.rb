@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 N = gets.to_i
 Q = gets.split.map(&:to_i)
 A = gets.split.map(&:to_i)
@@ -10,7 +12,7 @@ ans = 0
   N.times do |i|
     if Q[i] < A[i] * x
       y = -INF
-    elsif B[i] > 0
+    elsif (B[i]).positive?
       y = [y, (Q[i] - A[i] * x) / B[i]].min
     end
   end

@@ -1,4 +1,6 @@
-#自分のコード
+# frozen_string_literal: true
+
+# 自分のコード
 # n, x = gets.chomp.split.map(&:to_i)
 # scores = gets.chomp.split.map(&:to_i)
 
@@ -21,17 +23,16 @@
 
 # puts calculate(min_amount)
 
-
 N, X = gets.split.map(&:to_i)
 A = gets.split.map(&:to_i)
 A.append(-1)
 
-for last in 0..100
+(0..100).each do |last|
   B = A.clone
-  B[N-1] = last
+  B[N - 1] = last
   B.sort!
   sum = 0
-  for i in 1..(N-2)
+  (1..(N - 2)).each do |i|
     sum += B[i]
   end
   if sum >= X
@@ -40,10 +41,9 @@ for last in 0..100
   end
 end
 
-puts "-1"
+puts '-1'
 
-
-#公式の回答
+# 公式の回答
 
 # N, X = gets.split.map(&:to_i)
 # A = gets.split.map(&:to_i)

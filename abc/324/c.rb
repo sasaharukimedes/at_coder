@@ -1,4 +1,6 @@
-#公式回答
+# frozen_string_literal: true
+
+# 公式回答
 
 n = gets.to_i
 t2 = gets.chomp
@@ -30,51 +32,35 @@ ans = []
 (1..n).each do |i|
   t = s[i]
   flag = false
-  if a[i] == t.length && t.length == t2.length
-    flag = true
-  end
-  if a[i] + b[i] >= t.length && t.length + 1 == t2.length
-    flag = true
-  end
-  if a[i] + b[i] >= t.length - 1 && t.length - 1 == t2.length
-    flag = true
-  end
-  if a[i] + b[i] == t.length - 1 && t.length == t2.length
-    flag = true
-  end
+  flag = true if a[i] == t.length && t.length == t2.length
+  flag = true if a[i] + b[i] >= t.length && t.length + 1 == t2.length
+  flag = true if a[i] + b[i] >= t.length - 1 && t.length - 1 == t2.length
+  flag = true if a[i] + b[i] == t.length - 1 && t.length == t2.length
   ans.push(i) if flag
 end
 
 puts ans.length
 puts ans.join(' ')
 
----------------------------------------
-
 def check(s, t)
-  if s.length > t.length
-    return check(t, s)
-  end
+  return check(t, s) if s.length > t.length
 
-  if s.length < t.length - 1
-    return false
-  end
+  return false if s.length < t.length - 1
 
-  i, j, miss = 0, 0, 0
+  i = 0
+  j = 0
+  miss = 0
 
   while i < s.length
     if s[i] == t[j]
       i += 1
-      j += 1
     else
       miss += 1
-      if miss > 1
-        return false
-      end
-      if s.length == t.length
-        i += 1
-      end
-      j += 1
+      return false if miss > 1
+
+      i += 1 if s.length == t.length
     end
+    j += 1
   end
 
   true
@@ -91,4 +77,3 @@ end
 
 puts ans.length
 puts ans.join(' ')
-

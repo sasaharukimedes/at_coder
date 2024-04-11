@@ -1,12 +1,14 @@
+# frozen_string_literal: true
+
 N = gets.to_i
 A = gets.split.map(&:to_i)
 
 res = 0
 
-while true
+loop do
   exist_odd = false
-  for i in 0...N
-    if A[i] % 2 != 0
+  (0...N).each do |i|
+    if A[i].odd?
       exist_odd = true
       break
     end
@@ -14,7 +16,7 @@ while true
 
   break if exist_odd
 
-  for i in 0...N
+  (0...N).each do |i|
     A[i] /= 2
   end
 

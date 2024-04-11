@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # a, b = gets.split.map(&:to_i)
 # count = 0
 
@@ -15,4 +17,3 @@
 A, B = gets.split.map(&:to_i)
 ans = (B - 1 + A - 2) / (A - 1)
 puts ans
-

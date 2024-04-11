@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # n = gets.to_i
 
 # lines = Array.new(n)
@@ -24,13 +26,10 @@ end
 data.sort! { |a, b| [b[0], a[1]] <=> [a[0], b[1]] }
 
 # 結果を出力
-data.each_with_index do |item, index|
-  print "#{item[0+1]} "
+data.each_with_index do |item, _index|
+  print "#{item[0 + 1]} "
 end
 print "\n"
-
-
-
 
 # n = gets.to_i
 

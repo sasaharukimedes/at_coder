@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 n = gets.to_i
 
 n.times do
-  print "0"
+  print '0'
 end
 
 def alternating_string(n)
@@ -10,7 +12,7 @@ def alternating_string(n)
     s += '10'
   end
   s += '1'
-  return s
+  s
 end
 
 # 例えば、N=3 の場合:

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 A = gets.to_i
 B = gets.to_i
 C = gets.to_i
@@ -15,7 +17,6 @@ count = 0
 end
 
 puts count
-
 
 # まず、gets.to_iを用いて、500円玉の枚数A、100円玉の枚数B、50円玉の枚数C、そして目指す合計金額Xを入力として受け取ります。
 

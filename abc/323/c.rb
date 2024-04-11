@@ -1,4 +1,6 @@
-#うーんわからない
+# frozen_string_literal: true
+
+# うーんわからない
 
 # n, m = gets.split.map(&:to_i)
 # points = gets.split.map(&:to_i)
@@ -17,7 +19,7 @@
 
 # puts results.join(' ')
 
-#公式回答
+# 公式回答
 
 n, m = gets.split.map(&:to_i)
 points = gets.split.map(&:to_i)
@@ -27,9 +29,7 @@ now_scores = (1..n).to_a
 
 n.times do |i|
   m.times do |j|
-    if players[i][j] == 'o'
-      now_scores[i] += points[j]
-    end
+    now_scores[i] += points[j] if players[i][j] == 'o'
   end
 end
 

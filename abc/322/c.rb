@@ -1,4 +1,6 @@
-n, m = gets.split.map(&:to_i)
+# frozen_string_literal: true
+
+n, = gets.split.map(&:to_i)
 a = gets.split.map(&:to_i)
 
 a.sort!
@@ -6,24 +8,21 @@ a.sort!
 (1..n).each do |i|
   j = a.bsearch_index { |x| x >= i }
   if j.nil?
-    puts -1
+    puts(-1)
   else
     puts a[j] - i
   end
 end
 
-#Ruby回答者の解答例
+# Ruby回答者の解答例
 N, M = gets.split.collect(&:to_i)
 A = gets.split.collect(&:to_i)
-pairs = A.each_cons(2).to_a  # => [[1, 3], [3, 4], [4, 7], [7, 8]]
-if A.first != 1
-  pairs = [[0, A.first]] + pairs
-end
+pairs = A.each_cons(2).to_a # => [[1, 3], [3, 4], [4, 7], [7, 8]]
+pairs = [[0, A.first]] + pairs if A.first != 1
 c = 0
 (1..N).each do |i|
-  unless pairs[c]
-    break
-  end
+  break unless pairs[c]
+
   b, e = pairs[c]
   if i == b
     p 0
@@ -38,11 +37,10 @@ c = 0
 end
 p 0
 
-#コレでもいいというのだから驚き
+# コレでもいいというのだから驚き
 N, M = gets.split.collect(&:to_i)
 A = gets.split.collect(&:to_i)
-puts (1..N).collect { |i| A.bsearch { |e| e >= i } - i }
-
+puts((1..N).collect { |i| A.bsearch { |e| e >= i } - i })
 
 # 公式回答
 
@@ -74,9 +72,7 @@ puts (1..N).collect { |i| A.bsearch { |e| e >= i } - i }
 #   puts ok - i
 # end
 
-
-
-#lower_bound解
+# lower_bound解
 
 # n, m = gets.split.map(&:to_i)
 # a = gets.split.map(&:to_i).map{|x| x - 1}
@@ -86,9 +82,7 @@ puts (1..N).collect { |i| A.bsearch { |e| e >= i } - i }
 #   puts x - i
 # end
 
-
-
-#O（N）解
+# O（N）解
 
 # n, m = gets.split.map(&:to_i)
 # a = gets.split.map(&:to_i).map{|x| x - 1}

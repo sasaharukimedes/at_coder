@@ -1,4 +1,6 @@
-#そもそも問題文の言いたいことがさっぱり分からなかった。。。
+# frozen_string_literal: true
+
+# そもそも問題文の言いたいことがさっぱり分からなかった。。。
 
 n, a, b = gets.split.map(&:to_i)
 s = gets.chomp
@@ -6,7 +8,7 @@ s = gets.chomp
 na = 0
 nb = 0
 
-for i in 0...n
+(0...n).each do |i|
   yosen = 'No'
   if s[i] == 'a'
     if na + nb < a + b

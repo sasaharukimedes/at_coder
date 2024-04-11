@@ -1,10 +1,9 @@
+# frozen_string_literal: true
+
 s = gets.chomp.chars.map(&:to_i)
 p s
 count = 0
 s.each do |num|
-  if num == 1
-    count += 1
-  end
+  count += 1 if num == 1
 end
 puts count
-

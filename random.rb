@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 t = Thread.new do
-  p "start"
+  p 'start'
   sleep 5
-  p "end"
+  p 'end'
 end
-p "wait"
+p 'wait'
 t.join

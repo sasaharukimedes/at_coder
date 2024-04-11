@@ -1,6 +1,7 @@
-#自己回答
-#偶数はとりあえずクリア。奇数のときの処理がうまくできてない
+# frozen_string_literal: true
 
+# 自己回答
+# 偶数はとりあえずクリア。奇数のときの処理がうまくできてない
 
 # h, w = gets.split.map(&:to_i)
 
@@ -21,8 +22,7 @@
 
 # puts calculate(h, w)
 
-
-#公式回答
+# 公式回答
 
 def main
   h, w = gets.chomp.split.map(&:to_i)

@@ -1,8 +1,9 @@
+# frozen_string_literal: true
+
 # A = 0x2d
 # B = 0x19
 # puts "#{A} AND #{B} = #{A & B}"
 # puts "#{format('%08b', A)} AND #{format('%08b', B)} = #{format('%08b', A & B)}"
-
 
 BIT_FLAG_0 = (1 << 0)
 BIT_FLAG_1 = (1 << 1)
@@ -18,14 +19,10 @@ bit = BIT_FLAG_1 | BIT_FLAG_3 | BIT_FLAG_5
 puts "{1, 3, 5} = #{format('%08b', bit)}"
 
 # ビット {1, 3, 5} について、3 番目のフラグが立っていること
-if bit & BIT_FLAG_3 != 0
-  puts "3 is in     #{format('%08b', bit)}"
-end
+puts "3 is in     #{format('%08b', bit)}" if bit & BIT_FLAG_3 != 0
 
 # ビット {1, 3, 5} について、0 番目のフラグが立っていないこと
-if bit & BIT_FLAG_0 == 0
-  puts "0 is not in #{format('%08b', bit)}"
-end
+puts "0 is not in #{format('%08b', bit)}" if (bit & BIT_FLAG_0).zero?
 
 # 新たなビット
 bit2 = BIT_FLAG_0 | BIT_FLAG_3 | BIT_FLAG_4 # {0, 3, 4}
@@ -42,7 +39,7 @@ puts "before: #{format('%08b', bit2)}"
 bit2 &= ~BIT_FLAG_3
 puts "after : #{format('%08b', bit2)} (3 excluded)"
 
-puts "----------------------------------------------"
+puts '----------------------------------------------'
 
 BIT_FLAG_DAMAGE = (1 << 0)
 BIT_FLAG_DOKU = (1 << 1)
@@ -67,9 +64,7 @@ status |= MASK_PUNCH
 puts "punched: #{format('%04b', status)}"
 
 # 「毒」または「麻痺」かどうかを判定する
-if status & MASK_DOKU_MAHI != 0
-  puts "You are doku or mahi."
-end
+puts 'You are doku or mahi.' if status & MASK_DOKU_MAHI != 0
 
 # kaihuku: 0001 にする, HPは回復しない、麻痺は回復する
 status &= ~MASK_DOKU_MAHI
@@ -83,7 +78,5 @@ puts "sentofuno: #{format('%04b', status)}"
 status &= ~MASK_DOKU_MAHI
 puts "sentofuno no mama: #{format('%04b', status)}"
 
-
-
-#https://qiita.com/drken/items/7c6ff2aa4d8fce1c9361
-#https://www.javadrive.jp/ruby/num/index6.html
+# https://qiita.com/drken/items/7c6ff2aa4d8fce1c9361
+# https://www.javadrive.jp/ruby/num/index6.html

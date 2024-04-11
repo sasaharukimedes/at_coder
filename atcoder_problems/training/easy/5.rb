@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 N, M, C = gets.split.map(&:to_i)
 B = gets.split.map(&:to_i)
 
@@ -8,7 +10,7 @@ N.times do
   M.times do |j|
     sum += A[j] * B[j]
   end
-  ans += 1 if sum > 0
+  ans += 1 if sum.positive?
 end
 
 puts ans

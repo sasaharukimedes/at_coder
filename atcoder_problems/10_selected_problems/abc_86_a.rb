@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 a, b = gets.split.map(&:to_i)
 
 def even_or_odd(a, b)
-  if (a*b).even?
-    puts "Even"
+  if (a * b).even?
+    puts 'Even'
   else
-    puts "Odd"
+    puts 'Odd'
   end
 end
 

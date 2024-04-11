@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 s = gets.chomp
 
 if s[0] == '<' && s[-1] == '>' && s[1..-2] == '=' * (s.length - 2)
@@ -5,7 +7,6 @@ if s[0] == '<' && s[-1] == '>' && s[1..-2] == '=' * (s.length - 2)
 else
   puts 'No'
 end
----
 s = gets.chomp
 flag = true
 
@@ -17,7 +18,7 @@ flag = false if s[-1] != '>'
 end
 
 if flag
-  puts "Yes"
+  puts 'Yes'
 else
-  puts "No"
+  puts 'No'
 end

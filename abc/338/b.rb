@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 s = gets.chomp
 
 frequency = Hash.new(0)
@@ -6,11 +8,9 @@ s.each_char { |char| frequency[char] += 1 }
 max_frequency = frequency.values.max
 most_frequent_chars = frequency.select { |_, v| v == max_frequency }.keys
 
-puts most_frequent_chars.sort.first
+puts most_frequent_chars.min
 
-
-
-#officails answer
+# officails answer
 
 S = gets.chomp
 a = Hash.new(0)

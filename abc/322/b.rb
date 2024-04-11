@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 # 自分回答
-#おそらくstart_withのところで引数は取れない
+# おそらくstart_withのところで引数は取れない
 
 # n, m = gets.split.map(&:to_i)
 # s = gets.chomp
@@ -18,7 +20,7 @@
 #   puts 3
 # end
 
-n, m = gets.split.map(&:to_i)
+gets.split.map(&:to_i)
 s = gets.chomp
 t = gets.chomp
 

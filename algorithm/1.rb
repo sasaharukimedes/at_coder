@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # # 入力を受け取ります
 # n = gets.to_i
 # a = gets.split.map(&:to_i)
@@ -22,15 +24,14 @@
 # # 結果を出力します
 # puts res
 
-
 # 入力を受け取ります
-n = gets.to_i
+gets.to_i
 a = gets.split.map(&:to_i)
 
 res = 0
 
 # 操作が行える限り操作を繰り返します
-while true
+loop do
   # 配列内に奇数が存在するかどうかをチェックします
   exist_odd = false
   a.each do |item|
@@ -54,5 +55,3 @@ end
 
 # 結果を出力します
 puts res
-
-

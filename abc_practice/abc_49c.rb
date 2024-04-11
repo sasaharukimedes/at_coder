@@ -1,4 +1,6 @@
-divide = ["dream", "dreamer", "erase", "eraser"]
+# frozen_string_literal: true
+
+divide = %w[dream dreamer erase eraser]
 
 S = gets.chomp
 
@@ -12,11 +14,11 @@ i = 0
 while i < S.size
   can2 = false # 4 個の文字列たちどれかで divide できるか
   divide.each do |d|
-    if S[i, d.size] == d # d で divide できるか
-      can2 = true
-      i += d.size # divide できたら i を進める
-      break
-    end
+    next unless S[i, d.size] == d # d で divide できるか
+
+    can2 = true
+    i += d.size # divide できたら i を進める
+    break
   end
   unless can2 # divide できなかったら
     can = false
@@ -24,4 +26,4 @@ while i < S.size
   end
 end
 
-puts can ? "YES" : "NO"
+puts can ? 'YES' : 'NO'

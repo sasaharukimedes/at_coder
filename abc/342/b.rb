@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # n = gets.to_i
 # p = gets.split.map(&:to_i)
 # q = gets.to_i
@@ -7,7 +9,7 @@
 #   pairs << [a, b]
 # end
 
-n = gets.to_i
+gets.to_i
 p = gets.split.map(&:to_i)
 q = gets.to_i
 queries = q.times.map { gets.split.map(&:to_i) }

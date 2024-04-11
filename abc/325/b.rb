@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 n = gets.to_i
 cnt = Array.new(24, 0)
 n.times do

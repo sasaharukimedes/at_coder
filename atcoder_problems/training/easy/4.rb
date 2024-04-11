@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # n = gets.to_f
 
 # puts (n / 1.08).round
@@ -8,8 +10,8 @@
 #   puts ":("
 # end
 
-#公式回答
-#いまいち例外に関して理解できなかった。なぜ1079はだめなのか
+# 公式回答
+# いまいち例外に関して理解できなかった。なぜ1079はだめなのか
 
 N = gets.to_i
 
@@ -22,4 +24,4 @@ N = gets.to_i
   end
 end
 
-puts ":("
+puts ':('

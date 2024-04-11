@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 def find_sum_of_digits(n)
   sum = 0
-  while n > 0
+  while n.positive?
     sum += n % 10
     n /= 10
   end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # n = gets.to_i
 # s = gets.chomp
 # q = gets.to_i
@@ -8,4 +10,3 @@
 # end
 
 # puts s
-

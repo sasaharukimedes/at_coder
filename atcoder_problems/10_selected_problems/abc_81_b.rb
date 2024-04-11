@@ -1,9 +1,12 @@
-n = gets.to_i
+# frozen_string_literal: true
+
+gets.to_i
 a = gets.split.map(&:to_i)
 
 count = 0
 loop do
-  break if !a.all?(&:even?)
+  break unless a.all?(&:even?)
+
   a = a.map do |num|
     num / 2
   end
