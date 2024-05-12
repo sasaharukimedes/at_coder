@@ -21,3 +21,32 @@ total = 0
 end
 
 puts total
+
+#  -----------------------------------------
+
+# frozen_string_literal: true
+
+# puts "数値を入力してください:"
+# n = gets.chomp
+
+# sum = 0
+# n.each_char do |digit|
+#   sum += digit.to_i
+# end
+
+# puts "各桁の和: #{sum}"
+
+#  -------------------------------
+
+# frozen_string_literal: true
+
+puts '数値を入力してください:'
+n = gets.to_i
+
+sum_digit = 0
+while n > 0
+  sum_digit += n % 10
+  n /= 10
+end
+
+puts "各桁の和: #{sum_digit}"

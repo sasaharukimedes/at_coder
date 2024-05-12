@@ -13,20 +13,10 @@ GEM
     kramdown-parser-gfm (1.1.0)
       kramdown (~> 2.0)
     language_server-protocol (3.17.0.3)
-    nokogiri (1.16.4-aarch64-linux)
-      racc (~> 1.4)
-    nokogiri (1.16.4-arm-linux)
-      racc (~> 1.4)
-    nokogiri (1.16.4-arm64-darwin)
-      racc (~> 1.4)
-    nokogiri (1.16.4-x86-linux)
-      racc (~> 1.4)
     nokogiri (1.16.4-x86_64-darwin)
       racc (~> 1.4)
-    nokogiri (1.16.4-x86_64-linux)
-      racc (~> 1.4)
     parallel (1.24.0)
-    parser (3.3.1.0)
+    parser (3.3.0.5)
       ast (~> 2.4.1)
       racc
     racc (1.7.3)
@@ -36,7 +26,7 @@ GEM
     reverse_markdown (2.1.1)
       nokogiri
     rexml (3.2.6)
-    rubocop (1.63.4)
+    rubocop (1.63.1)
       json (~> 2.3)
       language_server-protocol (>= 3.17.0)
       parallel (~> 1.10)
@@ -47,8 +37,8 @@ GEM
       rubocop-ast (>= 1.31.1, < 2.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 2.4.0, < 3.0)
-    rubocop-ast (1.31.3)
-      parser (>= 3.3.1.0)
+    rubocop-ast (1.31.2)
+      parser (>= 3.3.0.4)
     ruby-progressbar (1.13.0)
     solargraph (0.50.0)
       backport (~> 1.2)
@@ -72,16 +62,11 @@ GEM
     yard (0.9.36)
 
 PLATFORMS
-  aarch64-linux
-  arm-linux
-  arm64-darwin
-  x86-linux
-  x86_64-darwin
-  x86_64-linux
+  x86_64-darwin-23
 
 DEPENDENCIES
   rubocop
   solargraph
 
 BUNDLED WITH
-   2.5.9
+   2.5.7

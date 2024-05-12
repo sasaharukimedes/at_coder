@@ -3,9 +3,10 @@
 k = gets.to_i
 a, b = gets.split.map(&:to_i)
 
-largest = (b / k) * k
-if a <= largest
-  puts 'OK'
-else
-  puts 'NG'
+for i in a..b
+  if i % k == 0
+    puts 'OK'
+    exit
+  end
 end
+puts 'NG'
